@@ -22,21 +22,25 @@ public class Cactus {
     
     
     public Cactus(int cWidth, int cHeight){
-        this.x = 840;
-        this.y = 275;
-        this.vx = -3;
+        this.x = cWidth/2;
+        this.vx = -7;
         this.vy = 0;
-        this.width = 60;
-        this.height = 60;
-        this.bounds = new Rectangle(this.x, this.y, this.width, this.height);
         this.random = (int) (Math.random() * 10);
         if (random < 6) {
-        this.ii = new ImageIcon(getClass().getResource("cactus 2 .png"));
+        this.ii = new ImageIcon(getClass().getResource("cactus 2  (1).png"));
                 this.img = ii.getImage();
+                   this.width = 35;
+        this.height = 45;
+        this.y = 285;
+        this.bounds = new Rectangle(this.x, this.y, this.width, this.height);
     }
         else {
-            this.ii = new ImageIcon(getClass().getResource("Cactus 1 .png"));
+            this.ii = new ImageIcon(getClass().getResource("Cactus 1  (1).png"));
                 this.img = ii.getImage();
+                   this.width = 25;
+        this.height = 50;
+        this.y = 280;
+        this.bounds = new Rectangle(this.x, this.y, this.width, this.height);
         }
     }
     public void draw(Graphics g) {
@@ -71,5 +75,14 @@ public class Cactus {
     public void setVy(int vy) {
         this.vy = vy;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+    
     
 }
